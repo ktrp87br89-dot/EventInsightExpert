@@ -27,7 +27,6 @@
             to { opacity: 1; transform: translateY(0); } 
         }
         
-        /* สไตล์ปุ่มให้คะแนน 1-5 */
         .rating-group input[type="radio"] { display: none; }
         .rating-group label { 
             display: inline-flex; justify-content: center; align-items: center; 
@@ -41,7 +40,6 @@
         }
         .rating-group label:hover { background: rgba(255,255,255,0.2); }
         
-        /* สไตล์ปุ่มตัวเลือกแบบกล่องยาว */
         .option-group input[type="radio"] { display: none; }
         .option-group label { 
             display: block; padding: 12px 20px; border-radius: 12px; 
@@ -53,7 +51,6 @@
             background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #fbd38d; 
         }
         
-        /* สไตล์ช่องกรอกข้อความ */
         .custom-input {
             width: 100%; background: rgba(17, 24, 39, 0.5); color: white; 
             border-radius: 0.5rem; padding: 0.75rem; border: 1px solid rgba(75, 85, 99, 1); 
@@ -70,10 +67,10 @@
 
         <div class="text-center mb-8 relative z-10">
             <h1 class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 mb-2">
-                แบบสอบถามความพึงพอใจการจัดงานเลี้ยงพนักงาน [cite: 1]
+                แบบสอบถามความพึงพอใจการจัดงานเลี้ยงพนักงาน
             </h1>
-            <p class="text-lg sm:text-xl font-medium text-white mb-1">"๙ สิงห์ วาทะศิลป์" [cite: 1]</p>
-            <p class="text-sm sm:text-base text-gray-400">วันที่ 21 กุมภาพันธ์ 2569 [cite: 1]</p>
+            <p class="text-lg sm:text-xl font-medium text-white mb-1">"๙ สิงห์ วาทะศิลป์"</p>
+            <p class="text-sm sm:text-base text-gray-400">วันที่ 21 กุมภาพันธ์ 2569</p>
         </div>
 
         <div class="w-full bg-gray-700 rounded-full h-2 mb-8 relative z-10" id="progress-container">
@@ -83,14 +80,14 @@
         <form id="surveyForm" class="relative z-10">
             
             <div class="step active" id="step1">
-                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fas fa-id-card text-amber-400"></i> ส่วนที่ 1: ข้อมูลทั่วไป [cite: 3]</h2>
+                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fas fa-id-card text-amber-400"></i> ส่วนที่ 1: ข้อมูลทั่วไป</h2>
                 <div class="space-y-6">
                     <div>
-                        <label class="block text-gray-200 mb-2">สังกัดฝ่าย/แผนก [cite: 4]</label>
+                        <label class="block text-gray-200 mb-2">สังกัดฝ่าย/แผนก</label>
                         <input type="text" name="department" class="custom-input" placeholder="ระบุแผนกของคุณ">
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-2">เพศ [cite: 5]</label>
+                        <label class="block text-gray-200 mb-2">เพศ</label>
                         <div class="flex gap-6">
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="gender" value="ชาย" class="accent-amber-500 w-5 h-5"> ชาย</label>
                             <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="gender" value="หญิง" class="accent-amber-500 w-5 h-5"> หญิง</label>
@@ -98,23 +95,23 @@
                         </div>
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-2">ช่วงอายุ [cite: 6]</label>
+                        <label class="block text-gray-200 mb-2">ช่วงอายุ</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 option-group">
-                            <div><input type="radio" name="age" id="age1" value="20-30 ปี"><label for="age1">20 - 30 ปี [cite: 6]</label></div>
-                            <div><input type="radio" name="age" id="age2" value="31-40 ปี"><label for="age2">31 - 40 ปี [cite: 6]</label></div>
-                            <div><input type="radio" name="age" id="age3" value="41-50 ปี"><label for="age3">41 - 50 ปี [cite: 6]</label></div>
-                            <div><input type="radio" name="age" id="age4" value="50 ปีขึ้นไป"><label for="age4">50 ปีขึ้นไป [cite: 6]</label></div>
+                            <div><input type="radio" name="age" id="age1" value="20-30 ปี"><label for="age1">20 - 30 ปี</label></div>
+                            <div><input type="radio" name="age" id="age2" value="31-40 ปี"><label for="age2">31 - 40 ปี</label></div>
+                            <div><input type="radio" name="age" id="age3" value="41-50 ปี"><label for="age3">41 - 50 ปี</label></div>
+                            <div><input type="radio" name="age" id="age4" value="50 ปีขึ้นไป"><label for="age4">50 ปีขึ้นไป</label></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="step" id="step2">
-                <h2 class="text-xl font-semibold mb-2 flex items-center gap-2"><i class="fas fa-star text-amber-400"></i> ส่วนที่ 2: ความพึงพอใจต่อภาพรวม [cite: 7]</h2>
-                <p class="text-sm text-gray-400 mb-6">(5 = มากที่สุด, 1 = ควรปรับปรุงอย่างยิ่ง) [cite: 8]</p>
+                <h2 class="text-xl font-semibold mb-2 flex items-center gap-2"><i class="fas fa-star text-amber-400"></i> ส่วนที่ 2: ความพึงพอใจต่อภาพรวม</h2>
+                <p class="text-sm text-gray-400 mb-6">(5 = มากที่สุด, 1 = ควรปรับปรุงอย่างยิ่ง)</p>
                 <div class="space-y-6">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <label class="text-gray-200 sm:w-2/3">1. สถานที่และบรรยากาศ<br><span class="text-sm text-gray-400">ความสะดวกในการเดินทาง, พื้นที่รองรับ, ความสะอาด [cite: 9]</span></label>
+                        <label class="text-gray-200 sm:w-2/3">1. สถานที่และบรรยากาศ<br><span class="text-sm text-gray-400">ความสะดวกในการเดินทาง, พื้นที่รองรับ, ความสะอาด</span></label>
                         <div class="rating-group">
                             <input type="radio" name="q1_atmosphere" id="q1_1" value="1"><label for="q1_1">1</label>
                             <input type="radio" name="q1_atmosphere" id="q1_2" value="2"><label for="q1_2">2</label>
@@ -124,7 +121,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <label class="text-gray-200 sm:w-2/3">2. อาหารและเครื่องดื่ม<br><span class="text-sm text-gray-400">รสชาติ, ปริมาณ, ความหลากหลาย (รวมถึงเมนูทางเลือก) [cite: 9]</span></label>
+                        <label class="text-gray-200 sm:w-2/3">2. อาหารและเครื่องดื่ม<br><span class="text-sm text-gray-400">รสชาติ, ปริมาณ, ความหลากหลาย (รวมถึงเมนูทางเลือก)</span></label>
                         <div class="rating-group">
                             <input type="radio" name="q2_food" id="q2_1" value="1"><label for="q2_1">1</label>
                             <input type="radio" name="q2_food" id="q2_2" value="2"><label for="q2_2">2</label>
@@ -134,7 +131,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <label class="text-gray-200 sm:w-2/3">3. รูปแบบกิจกรรม<br><span class="text-sm text-gray-400">ธีมงาน, ความสนุกสนาน, ความน่าสนใจของโชว์/เกม, รางวัล [cite: 9]</span></label>
+                        <label class="text-gray-200 sm:w-2/3">3. รูปแบบกิจกรรม<br><span class="text-sm text-gray-400">ธีมงาน, ความสนุกสนาน, ความน่าสนใจของโชว์/เกม, รางวัล</span></label>
                         <div class="rating-group">
                             <input type="radio" name="q3_activities" id="q3_1" value="1"><label for="q3_1">1</label>
                             <input type="radio" name="q3_activities" id="q3_2" value="2"><label for="q3_2">2</label>
@@ -144,7 +141,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <label class="text-gray-200 sm:w-2/3">4. ระยะเวลาของงาน<br><span class="text-sm text-gray-400">ความเหมาะสมของเวลาเริ่ม-เลิก [cite: 9]</span></label>
+                        <label class="text-gray-200 sm:w-2/3">4. ระยะเวลาของงาน<br><span class="text-sm text-gray-400">ความเหมาะสมของเวลาเริ่ม-เลิก</span></label>
                         <div class="rating-group">
                             <input type="radio" name="q4_timing" id="q4_1" value="1"><label for="q4_1">1</label>
                             <input type="radio" name="q4_timing" id="q4_2" value="2"><label for="q4_2">2</label>
@@ -154,7 +151,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <label class="text-gray-200 sm:w-2/3">5. การประชาสัมพันธ์<br><span class="text-sm text-gray-400">ข้อมูลล่วงหน้าชัดเจน เข้าถึงง่าย [cite: 9]</span></label>
+                        <label class="text-gray-200 sm:w-2/3">5. การประชาสัมพันธ์<br><span class="text-sm text-gray-400">ข้อมูลล่วงหน้าชัดเจน เข้าถึงง่าย</span></label>
                         <div class="rating-group">
                             <input type="radio" name="q5_pr" id="q5_1" value="1"><label for="q5_1">1</label>
                             <input type="radio" name="q5_pr" id="q5_2" value="2"><label for="q5_2">2</label>
@@ -167,53 +164,53 @@
             </div>
 
             <div class="step" id="step3">
-                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fas fa-chart-line text-amber-400"></i> ส่วนที่ 3: ประสิทธิผลในมุมมองบริษัท [cite: 10]</h2>
+                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fas fa-chart-line text-amber-400"></i> ส่วนที่ 3: ประสิทธิผลในมุมมองบริษัท</h2>
                 <div class="space-y-6">
                     <div>
-                        <label class="block text-gray-200 mb-3">กิจกรรมนี้ช่วยให้ท่านรู้สึกผ่อนคลายจากการทำงานหรือไม่? [cite: 11]</label>
+                        <label class="block text-gray-200 mb-3">กิจกรรมนี้ช่วยให้ท่านรู้สึกผ่อนคลายจากการทำงานหรือไม่?</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 option-group">
-                            <div><input type="radio" name="effect_relax" id="rel1" value="มากที่สุด"><label for="rel1">มากที่สุด [cite: 12]</label></div>
-                            <div><input type="radio" name="effect_relax" id="rel2" value="มาก"><label for="rel2">มาก [cite: 12]</label></div>
-                            <div><input type="radio" name="effect_relax" id="rel3" value="ปานกลาง"><label for="rel3">ปานกลาง [cite: 12]</label></div>
-                            <div><input type="radio" name="effect_relax" id="rel4" value="น้อย"><label for="rel4">น้อย [cite: 12]</label></div>
+                            <div><input type="radio" name="effect_relax" id="rel1" value="มากที่สุด"><label for="rel1">มากที่สุด</label></div>
+                            <div><input type="radio" name="effect_relax" id="rel2" value="มาก"><label for="rel2">มาก</label></div>
+                            <div><input type="radio" name="effect_relax" id="rel3" value="ปานกลาง"><label for="rel3">ปานกลาง</label></div>
+                            <div><input type="radio" name="effect_relax" id="rel4" value="น้อย"><label for="rel4">น้อย</label></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-3">กิจกรรมนี้ช่วยให้ท่านได้ทำความรู้จักหรือพูดคุยกับเพื่อนร่วมงานต่างแผนกมากขึ้นหรือไม่? [cite: 13]</label>
+                        <label class="block text-gray-200 mb-3">กิจกรรมนี้ช่วยให้ท่านได้ทำความรู้จักหรือพูดคุยกับเพื่อนร่วมงานต่างแผนกมากขึ้นหรือไม่?</label>
                         <div class="grid grid-cols-1 gap-2 option-group">
-                            <div><input type="radio" name="effect_network" id="net1" value="ช่วยได้อย่างมาก"><label for="net1">ช่วยได้อย่างมาก [cite: 14]</label></div>
-                            <div><input type="radio" name="effect_network" id="net2" value="ช่วยได้บ้าง"><label for="net2">ช่วยได้บ้าง [cite: 14]</label></div>
-                            <div><input type="radio" name="effect_network" id="net3" value="ไม่รู้สึกถึงความแตกต่าง"><label for="net3">ไม่รู้สึกถึงความแตกต่าง [cite: 14]</label></div>
+                            <div><input type="radio" name="effect_network" id="net1" value="ช่วยได้อย่างมาก"><label for="net1">ช่วยได้อย่างมาก</label></div>
+                            <div><input type="radio" name="effect_network" id="net2" value="ช่วยได้บ้าง"><label for="net2">ช่วยได้บ้าง</label></div>
+                            <div><input type="radio" name="effect_network" id="net3" value="ไม่รู้สึกถึงความแตกต่าง"><label for="net3">ไม่รู้สึกถึงความแตกต่าง</label></div>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-3">ท่านรู้สึกว่าบริษัทให้ความสำคัญและใส่ใจพนักงานผ่านการจัดงานครั้งนี้หรือไม่? [cite: 15]</label>
+                        <label class="block text-gray-200 mb-3">ท่านรู้สึกว่าบริษัทให้ความสำคัญและใส่ใจพนักงานผ่านการจัดงานครั้งนี้หรือไม่?</label>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 option-group">
-                            <div><input type="radio" name="effect_care" id="care1" value="รู้สึกมาก"><label for="care1">รู้สึกมาก [cite: 16]</label></div>
-                            <div><input type="radio" name="effect_care" id="care2" value="รู้สึกปานกลาง"><label for="care2">รู้สึกปานกลาง [cite: 16]</label></div>
-                            <div><input type="radio" name="effect_care" id="care3" value="ไม่ค่อยรู้สึก"><label for="care3">ไม่ค่อยรู้สึก [cite: 16]</label></div>
+                            <div><input type="radio" name="effect_care" id="care1" value="รู้สึกมาก"><label for="care1">รู้สึกมาก</label></div>
+                            <div><input type="radio" name="effect_care" id="care2" value="รู้สึกปานกลาง"><label for="care2">รู้สึกปานกลาง</label></div>
+                            <div><input type="radio" name="effect_care" id="care3" value="ไม่ค่อยรู้สึก"><label for="care3">ไม่ค่อยรู้สึก</label></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="step" id="step4">
-                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fas fa-comment-dots text-amber-400"></i> ส่วนที่ 4: ข้อเสนอแนะเชิงสร้างสรรค์ [cite: 17]</h2>
+                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fas fa-comment-dots text-amber-400"></i> ส่วนที่ 4: ข้อเสนอแนะเชิงสร้างสรรค์</h2>
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-gray-200 mb-2">✨ สิ่งที่ท่าน "ประทับใจที่สุด" ในงานครั้งนี้คืออะไร: [cite: 18]</label>
+                        <label class="block text-gray-200 mb-2">✨ สิ่งที่ท่าน "ประทับใจที่สุด" ในงานครั้งนี้คืออะไร:</label>
                         <textarea name="feedback_impress" class="custom-input" rows="2" placeholder="พิมพ์คำตอบของคุณ..."></textarea>
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-2">🛠️ สิ่งที่ควร "ปรับปรุงหรือเปลี่ยนแปลง" ในปีหน้า: [cite: 20]</label>
+                        <label class="block text-gray-200 mb-2">🛠️ สิ่งที่ควร "ปรับปรุงหรือเปลี่ยนแปลง" ในปีหน้า:</label>
                         <textarea name="feedback_improve" class="custom-input" rows="2" placeholder="พิมพ์คำตอบของคุณ..."></textarea>
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-2">🎭 ธีมงาน หรือ สถานที่ ที่ท่านอยากให้จัดในครั้งต่อไป: [cite: 22]</label>
+                        <label class="block text-gray-200 mb-2">🎭 ธีมงาน หรือ สถานที่ ที่ท่านอยากให้จัดในครั้งต่อไป:</label>
                         <input type="text" name="feedback_theme" class="custom-input" placeholder="พิมพ์คำตอบของคุณ...">
                     </div>
                     <div>
-                        <label class="block text-gray-200 mb-2">💡 ข้อเสนอแนะเพิ่มเติม: [cite: 24]</label>
+                        <label class="block text-gray-200 mb-2">💡 ข้อเสนอแนะเพิ่มเติม:</label>
                         <textarea name="feedback_other" class="custom-input" rows="2" placeholder="พิมพ์คำตอบของคุณ..."></textarea>
                     </div>
                 </div>
@@ -232,21 +229,18 @@
         <div id="successMessage" class="hidden text-center py-10">
             <div class="text-6xl text-green-400 mb-4"><i class="fas fa-check-circle"></i></div>
             <h2 class="text-2xl font-bold mb-2">ขอบคุณสำหรับความคิดเห็น!</h2>
-            <p class="text-gray-300">ความคิดเห็นของท่านมีค่าอย่างยิ่งในการช่วยให้ทีมงานนำไปพัฒนารูปแบบการจัดกิจกรรมในอนาคตให้ดียิ่งขึ้น [cite: 2]</p>
+            <p class="text-gray-300">ความคิดเห็นของท่านมีค่าอย่างยิ่งในการช่วยให้ทีมงานนำไปพัฒนารูปแบบการจัดกิจกรรมในอนาคตให้ดียิ่งขึ้น</p>
         </div>
     </div>
 
     <script>
-        // ==========================================
-        // ⚠️ วาง URL ที่ได้จาก Google Apps Script ตรงนี้
-        // ==========================================
+        // ใช้ URL ของคุณที่คุณตรวจสอบแล้ว
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzMpTW4Sd9pnnyjrkidEeYcxCZMucuIZf-H2d5keEI5q5q0_ZgzmDlZ4b4xlkPfILPz/exec';
         
         let currentStep = 1;
         const totalSteps = 4;
         const form = document.getElementById('surveyForm');
 
-        // ฟังก์ชันอัปเดตหน้าจอและการแสดงผลปุ่ม
         const updateUI = () => {
             document.querySelectorAll('.step').forEach((el, index) => { 
                 el.classList.toggle('active', index + 1 === currentStep); 
@@ -265,20 +259,18 @@
             }
         };
 
-        // เหตุการณ์เมื่อกดปุ่ม "ถัดไป" หรือ "ส่งแบบประเมิน"
         document.getElementById('nextBtn').addEventListener('click', () => {
             if (currentStep < totalSteps) {
                 currentStep++;
                 updateUI();
             } else {
-                // เปลี่ยนปุ่มเป็นสถานะกำลังโหลด
                 const btn = document.getElementById('nextBtn');
                 btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> กำลังบันทึก...';
                 btn.disabled = true;
                 btn.classList.add('opacity-50', 'cursor-not-allowed');
 
-                // ดึงข้อมูลฟอร์มและยิงตรงเข้า Google Sheets
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                // ⚠️ เพิ่ม mode: 'no-cors' เพื่อแก้ปัญหาโดนเบราว์เซอร์บล็อก
+                fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
                     .then(response => {
                         form.style.display = 'none';
                         document.getElementById('progress-container').style.display = 'none';
@@ -286,8 +278,7 @@
                     })
                     .catch(error => {
                         console.error('Error!', error.message);
-                        alert('เกิดข้อผิดพลาดในการส่งข้อมูล โปรดตรวจสอบว่าคุณได้ใส่ URL จาก Apps Script แล้วหรือยัง');
-                        // คืนค่าปุ่มให้กดใหม่ได้
+                        alert('เกิดข้อผิดพลาดในการส่งข้อมูล โปรดตรวจสอบว่าคุณตั้งค่า "ผู้มีสิทธิ์เข้าถึง: ทุกคน" ใน Apps Script แล้วหรือยัง');
                         btn.disabled = false;
                         btn.innerHTML = 'ส่งแบบประเมิน <i class="fas fa-paper-plane ml-2"></i>';
                         btn.classList.remove('opacity-50', 'cursor-not-allowed');
@@ -295,7 +286,6 @@
             }
         });
 
-        // เหตุการณ์เมื่อกดปุ่ม "ย้อนกลับ"
         document.getElementById('prevBtn').addEventListener('click', () => { 
             if (currentStep > 1) { 
                 currentStep--; 
