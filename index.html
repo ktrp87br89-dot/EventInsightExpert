@@ -8,54 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { 
-            font-family: 'Prompt', sans-serif; 
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
-            color: #ffffff; 
-            min-height: 100vh; 
-        }
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(16px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            border-radius: 24px; 
-        }
+        body { font-family: 'Prompt', sans-serif; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #ffffff; min-height: 100vh; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; }
         .step { display: none; animation: fadeIn 0.5s ease-in-out; }
         .step.active { display: block; }
-        @keyframes fadeIn { 
-            from { opacity: 0; transform: translateY(10px); } 
-            to { opacity: 1; transform: translateY(0); } 
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
         .rating-group input[type="radio"] { display: none; }
-        .rating-group label { 
-            display: inline-flex; justify-content: center; align-items: center; 
-            width: 40px; height: 40px; border-radius: 50%; 
-            background: rgba(255,255,255,0.1); cursor: pointer; 
-            transition: all 0.3s; margin: 0 5px; font-weight: 500; 
-        }
-        .rating-group input[type="radio"]:checked + label { 
-            background: #f59e0b; color: #111; transform: scale(1.1); 
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.5); 
-        }
+        .rating-group label { display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s; margin: 0 5px; font-weight: 500; }
+        .rating-group input[type="radio"]:checked + label { background: #f59e0b; color: #111; transform: scale(1.1); box-shadow: 0 0 15px rgba(245, 158, 11, 0.5); }
         .rating-group label:hover { background: rgba(255,255,255,0.2); }
         
         .option-group input[type="radio"] { display: none; }
-        .option-group label { 
-            display: block; padding: 12px 20px; border-radius: 12px; 
-            background: rgba(255,255,255,0.05); cursor: pointer; 
-            transition: all 0.3s; border: 1px solid rgba(255,255,255,0.1); 
-            margin-bottom: 8px; 
-        }
-        .option-group input[type="radio"]:checked + label { 
-            background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #fbd38d; 
-        }
+        .option-group label { display: block; padding: 12px 20px; border-radius: 12px; background: rgba(255,255,255,0.05); cursor: pointer; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 8px; }
+        .option-group input[type="radio"]:checked + label { background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #fbd38d; }
         
-        .custom-input {
-            width: 100%; background: rgba(17, 24, 39, 0.5); color: white; 
-            border-radius: 0.5rem; padding: 0.75rem; border: 1px solid rgba(75, 85, 99, 1); 
-            outline: none; transition: all 0.3s;
-        }
+        .custom-input { width: 100%; background: rgba(17, 24, 39, 0.5); color: white; border-radius: 0.5rem; padding: 0.75rem; border: 1px solid rgba(75, 85, 99, 1); outline: none; transition: all 0.3s; }
         .custom-input:focus { border-color: #f59e0b; box-shadow: 0 0 0 1px #f59e0b; }
     </style>
 </head>
@@ -141,7 +109,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <label class="text-gray-200 sm:w-2/3">4. ระยะเวลาของงาน<br><span class="text-sm text-gray-400">ความเหมาะสมของเวลาเริ่ม-เลิก</span></label>
+                        <label class="text-gray-200 sm:w-2/3">4. ระยะเวลาของงาน<br><span class="text-sm text-gray-400">ความเหมาะสมของเวลาเริ่ม-เลิก, การดำเนินรายการ</span></label>
                         <div class="rating-group">
                             <input type="radio" name="q4_timing" id="q4_1" value="1"><label for="q4_1">1</label>
                             <input type="radio" name="q4_timing" id="q4_2" value="2"><label for="q4_2">2</label>
@@ -158,6 +126,16 @@
                             <input type="radio" name="q5_pr" id="q5_3" value="3"><label for="q5_3">3</label>
                             <input type="radio" name="q5_pr" id="q5_4" value="4"><label for="q5_4">4</label>
                             <input type="radio" name="q5_pr" id="q5_5" value="5" checked><label for="q5_5">5</label>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <label class="text-gray-200 sm:w-2/3">6. การบริการ<br><span class="text-sm text-gray-400">มนุษยสัมพันธ์ของเจ้าหน้าที่, ความรวดเร็ว, การดูแลความปลอดภัย, การต้อนรับ</span></label>
+                        <div class="rating-group">
+                            <input type="radio" name="q6_service" id="q6_1" value="1"><label for="q6_1">1</label>
+                            <input type="radio" name="q6_service" id="q6_2" value="2"><label for="q6_2">2</label>
+                            <input type="radio" name="q6_service" id="q6_3" value="3"><label for="q6_3">3</label>
+                            <input type="radio" name="q6_service" id="q6_4" value="4"><label for="q6_4">4</label>
+                            <input type="radio" name="q6_service" id="q6_5" value="5" checked><label for="q6_5">5</label>
                         </div>
                     </div>
                 </div>
@@ -234,7 +212,7 @@
     </div>
 
     <script>
-        // ใช้ URL ของคุณที่คุณตรวจสอบแล้ว
+        // ⚠️ อย่าลืมเช็คให้มั่นใจว่า URL ของคุณถูกต้อง
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzMpTW4Sd9pnnyjrkidEeYcxCZMucuIZf-H2d5keEI5q5q0_ZgzmDlZ4b4xlkPfILPz/exec';
         
         let currentStep = 1;
@@ -269,8 +247,9 @@
                 btn.disabled = true;
                 btn.classList.add('opacity-50', 'cursor-not-allowed');
 
-                // ⚠️ เพิ่ม mode: 'no-cors' เพื่อแก้ปัญหาโดนเบราว์เซอร์บล็อก
-                fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+                const data = new URLSearchParams(new FormData(form));
+
+                fetch(scriptURL, { method: 'POST', body: data, mode: 'no-cors' })
                     .then(response => {
                         form.style.display = 'none';
                         document.getElementById('progress-container').style.display = 'none';
